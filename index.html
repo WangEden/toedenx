@@ -52,7 +52,7 @@
     <h1>站点已迁移</h1>
     <p>
       <strong>wangeden.top</strong> 已永久迁移至
-      <a href="https://edenx.me">edenx.me</a>
+      <a id="target" href="https://edenx.me">edenx.me</a>
     </p>
 
     <p class="muted">
@@ -71,14 +71,12 @@
       const total = 10; // seconds
       let t = total;
 
-      const secEl = document.getElementById("sec");
       const secCnEl = document.getElementById("sec_cn");
       const targetEl = document.getElementById("target");
 
       targetEl.href = url;
 
       function tick() {
-        secEl.textContent = String(t);
         secCnEl.textContent = String(t);
         if (t <= 0) {
           window.location.replace(url);
